@@ -1,0 +1,249 @@
+/* --- Global Styles --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Header Styles & Sticky Position --- */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: #1e272c;
+  color: #ffffff;
+  padding: 15px 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #f5f6fa;
+}
+
+.header-container nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header-container nav a {
+  color: #a4b0be;
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: color 0.2s ease-in-out;
+}
+
+.header-container nav a:hover {
+  color: #ffffff;
+}
+
+/* --- Main Content Area --- */
+.main-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* --- Article & Tag Styles --- */
+.featured-article {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.article-image-wrapper {
+  position: relative;
+}
+
+.article-image-wrapper img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+}
+
+/* Label Hot News (Absolute Position) */
+.hot-news-tag {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #e74c3c;
+  color: #ffffff;
+  padding: 6px 14px;
+  font-size: 0.85em;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.article-content {
+  padding: 30px;
+}
+
+.article-content h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #2c3e50;
+}
+
+.meta-info {
+  font-size: 0.85em;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #3498db;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* --- Sidebar Styles --- */
+.sidebar {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #3498db;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 1.3em;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.trending-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trending-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.trending-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.trending-text h4 {
+  margin: 0 0 5px 0;
+  font-size: 0.95em;
+  color: #2c3e50;
+}
+
+.views {
+  font-size: 0.8em;
+  color: #95a5a6;
+}
+
+/* --- Footer Styles --- */
+footer {
+  background-color: #1e272c;
+  color: #a4b0be;
+  text-align: center;
+  padding: 30px;
+  margin-top: 40px;
+  font-size: 0.85em;
+}
+
+/* --- Responsive Layout (Media Queries) --- */
+
+/* Tablet & Desktop Kecil (>= 768px) */
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .main-container {
+    flex-direction: row;
+  }
+
+  .featured-article {
+    flex: 2.5;
+  }
+
+  .sidebar {
+    flex: 1.5;
+    align-self: flex-start;
+  }
+
+  .article-image-wrapper img {
+    max-height: 400px;
+  }
+}
+
+/* Desktop Besar (>= 992px) */
+@media (min-width: 992px) {
+  body {
+    font-size: 15px;
+  }
+
+  .header-container h1 {
+    font-size: 2.2em;
+  }
+}
